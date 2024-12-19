@@ -1,0 +1,3 @@
+variable "Devops_ACR" {
+  
+}
