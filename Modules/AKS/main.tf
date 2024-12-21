@@ -14,6 +14,10 @@ resource "azurerm_kubernetes_cluster" "AKS" {
   identity {
     type = "SystemAssigned"
   }
+    network_profile {
+    network_plugin = "azure"
+    network_policy = "calico"
+  }
 
   tags = {
     Environment = "Production"
