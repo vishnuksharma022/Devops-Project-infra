@@ -22,6 +22,7 @@ module "Devops_AKS" {
 }
 
 module "Devops_SQL-DB" {
+  depends_on = [ module.Devops_RG ]
   source        = "../../Modules/SQL-DB"
   Devops_SQL-DB = var.Devops_SQL-DB
 
